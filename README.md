@@ -2,7 +2,6 @@
 
 # asdf-bin [![Build](https://github.com/joe733/asdf-bin/actions/workflows/build.yml/badge.svg)](https://github.com/joe733/asdf-bin/actions/workflows/build.yml) [![Lint](https://github.com/joe733/asdf-bin/actions/workflows/lint.yml/badge.svg)](https://github.com/joe733/asdf-bin/actions/workflows/lint.yml)
 
-
 [bin](https://github.com/marcosnils/bin) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
@@ -16,10 +15,7 @@
 
 # Dependencies
 
-**TODO: adapt this section**
-
-- `bash`, `curl`, `tar`: generic POSIX utilities.
-- `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
+- `bash`, `curl`: generic POSIX utilities.
 
 # Install
 
