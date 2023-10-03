@@ -24,7 +24,7 @@ get_os() {
 get_arch() {
 	arch=$(uname -m)
 	case $arch in
-	x86_64) arch="x86_64" ;;
+	x86_64) arch="amd64" ;;
 	arm64) arch="arm64" ;;
 	i386) arch="i386" ;;
 	*) fail "The architecture (${arch}) is not supported by this installation script." ;;
