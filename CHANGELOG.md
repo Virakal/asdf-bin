@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/yozachar/asdf-bin/compare/v1.0.0...v1.0.1) (2023-10-03)
+
+
+### Bug Fixes
+
+* x86_64 changed to amd64 ([71163f0](https://github.com/yozachar/asdf-bin/commit/71163f0f4b6bf642d96440ed77b4ff0062d0210f))
+
 ## 1.0.0 (2023-04-24)
 
 
