@@ -16,6 +16,7 @@ get_os() {
 	case $os in
 	Darwin) os="Darwin" ;;
 	Linux) os="Linux" ;;
+	MINGW*) os="Windows" ;;
 	*) fail "The os (${os}) is not supported by this installation script." ;;
 	esac
 	echo "$os"
@@ -30,6 +31,17 @@ get_arch() {
 	*) fail "The architecture (${arch}) is not supported by this installation script." ;;
 	esac
 	echo "$arch"
+}
+
+get_extension() {
+	os=$(uname -s)
+	case $os in
+	Darwin) ext="" ;;
+	Linux) ext="" ;;
+	MINGW*) ext=".exe" ;;
+	*) fail "The os (${os}) is not supported by this installation script." ;;
+	esac
+	echo "$ext"
 }
 
 curl_opts=(-fsSL)
@@ -58,7 +70,7 @@ download_release() {
 	version="$1"
 	filename="$2"
 
-	url="$GH_REPO/releases/download/v${version}/bin_${version}_$(get_os)_$(get_arch)"
+	url="$GH_REPO/releases/download/v${version}/bin_${version}_$(get_os)_$(get_arch)$(get_extension)"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
